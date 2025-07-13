@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VaultofCodes - Certificate Verifier</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;700&display=swap">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <!-- Preloader -->
+  <div id="preloader">
+    <div class="loader"></div>
+  </div>
+
+  <!-- Navbar -->
+  <header class="brand-header">
+    <img src="https://vaultofcodes.site/logo.png" alt="VaultofCodes Logo" class="brand-logo" />
+    <h1 class="brand-title">VaultofCodes</h1>
+    <div class="header-right">
+      <span id="clock"></span>
+      <button id="toggleTheme" class="theme-toggle" title="Toggle Theme">🌙</button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Input Section -->
+    <div class="container">
+      <h2>Verify Your Certificate</h2>
+      <input id="identifier" type="text" placeholder="Enter Email or ID" autocomplete="off" />
+      <ul class="suggestion-list" id="suggestionList"></ul>
+
+      <input id="phone" type="text" placeholder="Enter Phone Number (Optional)" />
+      <input id="batch" type="text" placeholder="Enter Batch Name (Optional)" />
+
+      <div class="action-buttons">
+        <button onclick="verifyStudent()">Verify</button>
+        <button onclick="resetForm()">Reset</button>
+        <button onclick="downloadDetails()">Download PDF</button>
+      </div>
+    </div>
+
+    <!-- Result Display -->
+    <div id="result"></div>
+    <div class="spinner hidden"></div>
+
+    <!-- Verification History -->
+    <div id="historyBox" class="container hidden">
+      <h3>Recent Verifications</h3>
+      <ul id="historyList"></ul>
+    </div>
+
+    <!-- Confetti Canvas -->
+    <canvas id="confettiCanvas"></canvas>
+  </main>
+
+  <div id="toast" class="toast"></div>
+  <button id="backToTop" title="Back to top">⬆️</button>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 VaultofCodes. All rights reserved.</p>
+    <div class="social-links">
+      <a href="https://github.com/vaultofcodes" target="_blank" title="GitHub">🐙</a>
+      <a href="https://linkedin.com/company/vaultofcodes" target="_blank" title="LinkedIn">💼</a>
+      <a href="https://twitter.com/vaultofcodes" target="_blank" title="Twitter">🐦</a>
+    </div>
+  </footer>
+</body>
+</html>
